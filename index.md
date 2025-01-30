@@ -7,7 +7,7 @@
 
 
 ## About me
-I am a PhD student at [MMLab@NTU](https://www.mmlab-ntu.com/index.html), advised by Prof. [Xingang Pan](https://xingangpan.github.io/). I previously served as a senior research engineer at Damo Academy, Alibaba Group, where I focus on researching video enhancement and editing, working with [Peiran Ren](https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en), [Xuansong Xie](https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en) and Prof. [Lei Zhang](https://www4.comp.polyu.edu.hk/~cslzhang/). Prior to joining Alibaba, I earned my M.Sc. degree in computer science and technology from Tsinghua University. I also hold a B.Sc. in fundamental physics and mathematics from Tsinghua University.
+I am a Ph.D. student at [MMLab@NTU](https://www.mmlab-ntu.com/index.html), advised by Prof. [Xingang Pan](https://xingangpan.github.io/). I previously served as a senior research engineer at Damo Academy, Alibaba Group, where I focus on researching video enhancement and editing, working with [Peiran Ren](https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en), [Xuansong Xie](https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en) and Prof. [Lei Zhang](https://www4.comp.polyu.edu.hk/~cslzhang/). Prior to joining Alibaba, I earned my M.Sc. degree in computer science and technology from Tsinghua University. I also hold a B.Sc. in fundamental physics and mathematics from Tsinghua University.
 
 My research interests span several areas, including deep learning, computer vision, and image and video generation and editing. I am also interested in exploring the applications of natural language processing in multimedia analysis.
 
@@ -22,7 +22,7 @@ My research interests span several areas, including deep learning, computer visi
 * Research Intern in ByteDance AI Lab, Beijing. July 2017 ~ Septempber 2017.
 * Research Engineer in Damo Academy, Alibaba Group, Beijing. July 2019 ~ November 2023.
 * Research Associate at MMLab@NTU, Singapore. November 2023 ~ Present.
-* PhD student at MMLab@NTU, Singapore. January 2025 ~ Present.
+* Ph.D. student at MMLab@NTU, Singapore. January 2025 ~ Present.
 
 <style>
   .publication-list {
