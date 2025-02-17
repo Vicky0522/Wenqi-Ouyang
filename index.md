@@ -17,12 +17,12 @@ My research interests span several areas, including deep learning, computer visi
 * B. Sc. in Fundamental Physics and Mathematics, Tsinghua University, Beijing. September 2012 ~ July 2016.
 * B. BM. (dual-degree) in Business Administration in Economics and Management. September 2013 ~ July 2016.
 * M. Sc. in Computer Science and Technology, Tsinghua University, Beijing. September 2016 ~ July 2019.
+* Ph.D. student at MMLab@NTU, Singapore. January 2025 ~ Present.
 
 ## Working Experience
 * Research Intern in ByteDance AI Lab, Beijing. July 2017 ~ Septempber 2017.
 * Research Engineer in Damo Academy, Alibaba Group, Beijing. July 2019 ~ November 2023.
 * Research Associate at MMLab@NTU, Singapore. November 2023 ~ Present.
-* Ph.D. student at MMLab@NTU, Singapore. January 2025 ~ Present.
 
 <style>
   .publication-list {
