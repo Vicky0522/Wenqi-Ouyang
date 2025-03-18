@@ -15,7 +15,7 @@ My research interests span several areas, including deep learning, computer visi
 
 ## Education
 * B. Sc. in Fundamental Physics and Mathematics, Tsinghua University, Beijing. September 2012 ~ July 2016.
-* B. BM. (dual-degree) in Business Administration in Economics and Management. September 2013 ~ July 2016.
+* B. BM. (Minor) in Business Administration in Economics and Management. September 2013 ~ July 2016.
 * M. Sc. in Computer Science and Technology, Tsinghua University, Beijing. September 2016 ~ July 2019.
 * Ph.D. student at MMLab@NTU, Singapore. January 2025 ~ Present.
 
