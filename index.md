@@ -50,13 +50,84 @@ My research interests span several areas, including deep learning, computer visi
       flex: 1;
       text-align: left;
   }
+  
+  .publication-figure{
+  /* 固定“画布”大小 */
+  width:300px;
+  height:150px;
+
+  /* 居中对齐 */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /* padding 区颜色：灰 or 白；自定 */
+  background:#fff;      /* letter‑box 色，可改 #fff */
+  border-radius:4px;        /* 可选圆角 */
+  overflow:hidden;          /* 超出剪裁，防止溢出 */
+}
+
+.publication-figure img{
+  width:100%;
+  height:100%;
+  object-fit:contain;       /* 保持比例 + 留空隙 */
+  object-position:center;   /* 居中 */
+}
 </style>
 
 ## Publications
 <ul class="publication-list">
   <li>
     <div class="publication-figure">
-      <img align="left" width="300" height="150" src="data/paper_figure/i2vedit.png">
+      <img align="left" src="data/paper_figure/tokensgen.jpg">
+    </div>
+    <div class="paper-details">
+      <b>TokensGen: Harnessing Condensed Tokens for Long Video Generation</b><br>
+      <b>Wenqi Ouyang</b>, <a href="https://xizaoqu.github.io/" target="_blank" rel="opener">Zeqi Xiao</a>, <a href="https://scholar.google.com/citations?user=qDsgBJAAAAAJ&hl=zh-CN" target="_blank" rel="opener">Danni Yang</a>, <a href="https://zhouyifan.net/about/" target="_blank" rel="opener">Yifan Zhou</a>, <a href="https://williamyang1991.github.io/" target="_blank" rel="opener">Shuai Yang</a>, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&hl=en" target="_blank" rel="opener">Lei Yang</a>, <a href="https://jianlou.github.io/" target="_blank" rel="opener">Jianlou Si</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="opener">Xingang Pan</a>. <br>
+      <b><em>International Conference on Computer Vision (ICCV, 2025)</em></b><br>
+      <a href="https://arxiv.org/abs/2507.15728" target="_blank" rel="opener">
+				 <i class="fa fa-file" aria-hidden="true"></i> arXiv </a> |
+      <a href="https://vicky0522.github.io/tokensgen-webpage/" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Homepage </a> |
+      <a href="https://github.com/Vicky0522/TokensGen" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
+    </div>
+  </li>
+  <li>
+    <div class="publication-figure">
+      <img align="left" src="data/paper_figure/worldmem.jpg">
+    </div>
+    <div class="paper-details">
+      <b>Worldmem: Long-term consistent world simulation with memory</b><br>
+      <a href="https://xizaoqu.github.io/" target="_blank" rel="opener">Zeqi Xiao</a>, <a href="https://nirvanalan.github.io/" target="_blank" rel="opener">Yushi Lan</a>, <a href="https://zhouyifan.net/about/" target="_blank" rel="opener">Yifan Zhou</a>, <b>Wenqi Ouyang</b>, <a href="https://williamyang1991.github.io/" target="_blank" rel="opener">Shuai Yang</a>, <a href="https://zengyh1900.github.io/" target="_blank" rel="opener">Yanhong Zeng</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="opener">Xingang Pan</a>. <br>
+      <b><em>arXiv preprint, 2025</em></b><br>
+      <a href="https://arxiv.org/abs/2504.12369" target="_blank" rel="opener">
+				 <i class="fa fa-file" aria-hidden="true"></i> arXiv </a> |
+      <a href="https://xizaoqu.github.io/worldmem/" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Homepage </a> |
+      <a href="https://github.com/xizaoqu/WorldMem" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
+    </div>
+  </li>
+  <li>
+    <div class="publication-figure">
+      <img align="left" src="data/paper_figure/trajattn.jpg">
+    </div>
+    <div class="paper-details">
+      <b>Trajectory attention for fine-grained video motion control</b><br>
+      <a href="https://xizaoqu.github.io/" target="_blank" rel="opener">Zeqi Xiao</a>, <b>Wenqi Ouyang</b>, <a href="https://zhouyifan.net/about/" target="_blank" rel="opener">Yifan Zhou</a>, <a href="https://williamyang1991.github.io/" target="_blank" rel="opener">Shuai Yang</a>, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&hl=en" target="_blank" rel="opener">Lei Yang</a>, <a href="https://jianlou.github.io/" target="_blank" rel="opener">Jianlou Si</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="opener">Xingang Pan</a>. <br>
+      <b><em>International Conference on Learning Representations (ICLR, 2024)</em></b><br>
+      <a href="https://arxiv.org/abs/2411.19324" target="_blank" rel="opener">
+				 <i class="fa fa-file" aria-hidden="true"></i> arXiv </a> |
+      <a href="https://xizaoqu.github.io/trajattn/" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Homepage </a> |
+      <a href="https://github.com/xizaoqu/TrajectoryAttention" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
+    </div>
+  </li>
+  <li>
+    <div class="publication-figure">
+      <img align="left" src="data/paper_figure/i2vedit.png">
     </div>
     <div class="paper-details">
       <b>I2VEdit: First-Frame-Guided Video Editing via Image-to-Video Diffusion Models</b><br>
@@ -71,8 +142,36 @@ My research interests span several areas, including deep learning, computer visi
     </div>
   </li>
   <li>
+  <div class="publication-figure">
+      <img align="left" src="data/paper_figure/movingcolor.jpg">
+    </div>
+    <div class="paper-details">
+      <b>MovingColor: Seamless Fusion of Fine-grained Video Color Enhancement</b><br>
+      Yi Dong, <a href="https://github.com/NTUYWANG103" target="_blank" rel="opener">Yuxi Wang</a>, Zheng Fang, <b>Wenqi Ouyang</b>, <a href="https://scholar.google.com/citations?user=wLTXeNwAAAAJ&hl=fr" target="_blank" rel="opener">Xianhui Lin</a>, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="opener">Zhiqi Shen</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="opener">Peiran Ren</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="opener">Xuansong Xie</a>, <a href="https://scholar.google.com/citations?user=J1vMnRgAAAAJ&hl=en" target="_blank" rel="opener">Qingming Huang</a>. <br>
+      <b><em>ACM International Conference on Multimedia (ACM MM, 2024)</em></b><br>
+      <a href="https://dl.acm.org/doi/abs/10.1145/3664647.3681130" target="_blank" rel="opener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Paper </a> |
+      <a href="https://github.com/NTUYWANG103/MovingColor" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
+    </div>
+  </li>
+  <li>
+  <div class="publication-figure">
+      <img align="left" src="data/paper_figure/cfnet.jpg">
+    </div>
+    <div class="paper-details">
+      <b>ChromaFusionNet (CFNet): natural fusion of fine-grained color editing</b><br>
+      Yi Dong, <a href="https://github.com/NTUYWANG103" target="_blank" rel="opener">Yuxi Wang</a>, Ruoxi Fan, <b>Wenqi Ouyang</b>, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="opener">Zhiqi Shen</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="opener">Peiran Ren</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="opener">Xuansong Xie</a>. <br>
+      <b><em>AAAI Conference on Artificial Intelligence (AAAI, 2024)</em></b><br>
+      <a href="https://ojs.aaai.org/index.php/AAAI/article/view/27925" target="_blank" rel="opener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Paper </a> |
+      <a href="https://github.com/NTUYWANG103/CFNet" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
+    </div>
+  </li>
+  <li>
     <div class="publication-figure">
-      <img align="left" width="300" height="150" src="data/paper_figure/rsfnet.png">
+      <img align="left" src="data/paper_figure/rsfnet.png">
     </div>
     <div class="paper-details">
       <b>RSFNet: A White-Box Image Retouching Approach using Region-Specific Color Filters</b><br>
@@ -86,7 +185,7 @@ My research interests span several areas, including deep learning, computer visi
   </li>
   <li>
     <div class="publication-figure">
-      <img align="left" width="300" height="150" src="data/paper_figure/ddcolor.png">
+      <img align="left" src="data/paper_figure/ddcolor.png">
     </div>
     <div class="paper-details">
       <b>DDColor: Towards Photo-Realistic and Semantic-Aware Image Colorization via Dual Decoders</b><br>
