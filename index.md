@@ -116,7 +116,7 @@ My research interests span several areas, including deep learning, computer visi
     <div class="paper-details">
       <b>Trajectory attention for fine-grained video motion control</b><br>
       <a href="https://xizaoqu.github.io/" target="_blank" rel="opener">Zeqi Xiao</a>, <b>Wenqi Ouyang</b>, <a href="https://zhouyifan.net/about/" target="_blank" rel="opener">Yifan Zhou</a>, <a href="https://williamyang1991.github.io/" target="_blank" rel="opener">Shuai Yang</a>, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&hl=en" target="_blank" rel="opener">Lei Yang</a>, <a href="https://jianlou.github.io/" target="_blank" rel="opener">Jianlou Si</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="opener">Xingang Pan</a>. <br>
-      <b><em>International Conference on Learning Representations (ICLR, 2024)</em></b><br>
+      <b><em>International Conference on Learning Representations (ICLR, 2025)</em></b><br>
       <a href="https://arxiv.org/abs/2411.19324" target="_blank" rel="opener">
 				 <i class="fa fa-file" aria-hidden="true"></i> arXiv </a> |
       <a href="https://xizaoqu.github.io/trajattn/" target="_blank" rel="noopener">
@@ -151,6 +151,8 @@ My research interests span several areas, including deep learning, computer visi
       <b><em>ACM International Conference on Multimedia (ACM MM, 2024)</em></b><br>
       <a href="https://dl.acm.org/doi/abs/10.1145/3664647.3681130" target="_blank" rel="opener">
 				 <i class="fa fa-file" aria-hidden="true"></i> Paper </a> |
+      <a href="https://yidong.pro/projects/movingcolor" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Homepage </a> |
       <a href="https://github.com/NTUYWANG103/MovingColor" target="_blank" rel="noopener">
 				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
     </div>
@@ -165,6 +167,8 @@ My research interests span several areas, including deep learning, computer visi
       <b><em>AAAI Conference on Artificial Intelligence (AAAI, 2024)</em></b><br>
       <a href="https://ojs.aaai.org/index.php/AAAI/article/view/27925" target="_blank" rel="opener">
 				 <i class="fa fa-file" aria-hidden="true"></i> Paper </a> |
+      <a href="https://yidong.pro/projects/cfnet" target="_blank" rel="noopener">
+				 <i class="fa fa-file" aria-hidden="true"></i> Homepage </a> |
       <a href="https://github.com/NTUYWANG103/CFNet" target="_blank" rel="noopener">
 				 <i class="fa fa-file" aria-hidden="true"></i>  Code </a>
     </div>
