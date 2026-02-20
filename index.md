@@ -100,7 +100,7 @@ My research interests span several areas, including deep learning, computer visi
     <div class="paper-details">
       <b>Worldmem: Long-term consistent world simulation with memory</b><br>
       <a href="https://xizaoqu.github.io/" target="_blank" rel="opener">Zeqi Xiao</a>, <a href="https://nirvanalan.github.io/" target="_blank" rel="opener">Yushi Lan</a>, <a href="https://zhouyifan.net/about/" target="_blank" rel="opener">Yifan Zhou</a>, <b>Wenqi Ouyang</b>, <a href="https://williamyang1991.github.io/" target="_blank" rel="opener">Shuai Yang</a>, <a href="https://zengyh1900.github.io/" target="_blank" rel="opener">Yanhong Zeng</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="opener">Xingang Pan</a>. <br>
-      <b><em>arXiv preprint, 2025</em></b><br>
+      <b><em>Conference on Neural Information Processing Systems (NeurIPS, 2025)</em></b><br>
       <a href="https://arxiv.org/abs/2504.12369" target="_blank" rel="opener">
 				 <i class="fa fa-file" aria-hidden="true"></i> arXiv </a> |
       <a href="https://xizaoqu.github.io/worldmem/" target="_blank" rel="noopener">
