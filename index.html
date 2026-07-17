@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wenqi Ouyang (欧阳雯琪)</title>
+<meta name="description" content="Wenqi Ouyang (欧阳雯琪) — Ph.D. student at MMLab@NTU. Research on computer vision, video and image generation and editing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-subtle:#f6f7f9;
+    --surface:#ffffff;
+    --text:#25292e;
+    --text-muted:#5b636d;
+    --heading:#14171a;
+    --accent:#3b5bdb;
+    --accent-soft:#ebefff;
+    --accent-2:#0ca678;
+    --border:#e7e9ee;
+    --border-strong:#d5d9e0;
+    --shadow:0 1px 2px rgba(20,23,26,.04),0 8px 24px rgba(20,23,26,.06);
+    --shadow-sm:0 1px 2px rgba(20,23,26,.05);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d1117;
+      --bg-subtle:#161b22;
+      --surface:#161b22;
+      --text:#c4ccd6;
+      --text-muted:#8b949e;
+      --heading:#eef2f6;
+      --accent:#7f9cff;
+      --accent-soft:#1b2440;
+      --accent-2:#3dd4a5;
+      --border:#242b34;
+      --border-strong:#30363d;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+      --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent);text-decoration:none;transition:color .15s ease;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--bg);
+    background:color-mix(in srgb,var(--bg) 82%,transparent);
+    backdrop-filter:saturate(180%) blur(12px);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:900px;margin:0 auto;padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .nav-brand-wrap{margin:0;font-size:1rem;font-weight:600;line-height:1.2;}
+  .nav-brand{font-weight:600;color:var(--heading);letter-spacing:-.01em;}
+  .nav-brand:hover{text-decoration:none;color:var(--accent);}
+  .nav-zh{color:var(--text-muted);font-weight:400;margin-left:7px;font-size:.92em;}
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+  .nav-links a{
+    color:var(--text-muted);font-size:14px;font-weight:500;
+    padding:6px 12px;border-radius:8px;
+  }
+  .nav-links a:hover{color:var(--accent);background:var(--accent-soft);text-decoration:none;}
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  section{scroll-margin-top:72px;}
+  .section-title{
+    font-family:"Inter",sans-serif;
+    font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 22px;padding-bottom:10px;
+    border-bottom:1px solid var(--border);
+    display:flex;align-items:center;gap:10px;
+  }
+  .section-title::before{content:"";width:18px;height:2px;background:var(--accent);border-radius:2px;}
+
+  /* ---------- Intro ---------- */
+  .intro{
+    padding:52px 0 48px;
+    display:flex;gap:42px;align-items:flex-start;
+  }
+  .intro-photo{
+    flex:0 0 220px;width:220px;
+    border-radius:16px;overflow:hidden;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    aspect-ratio:3/4;
+  }
+  .intro-photo img{width:100%;height:100%;object-fit:cover;}
+  .intro-body{flex:1;min-width:0;}
+  .intro-name{
+    font-family:"Newsreader",Georgia,serif;
+    font-size:2.5rem;line-height:1.05;font-weight:600;letter-spacing:-.015em;
+    color:var(--heading);margin:0 0 18px;
+  }
+  .intro-name .zh{font-size:1.55rem;color:var(--text-muted);font-weight:400;margin-left:10px;}
+  .links{margin:20px 0 0;font-size:1.02rem;color:var(--text-muted);}
+  .links a{color:var(--accent);font-weight:500;}
+  .links a:hover{text-decoration:underline;}
+  .links .sep{margin:0 10px;color:var(--border-strong);}
+  .btn{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:8px 15px;border-radius:10px;
+    font-size:14px;font-weight:500;
+    border:1px solid var(--border-strong);
+    background:var(--surface);color:var(--text);
+    box-shadow:var(--shadow-sm);
+    transition:all .15s ease;
+  }
+  .btn:hover{
+    text-decoration:none;color:var(--accent);
+    border-color:var(--accent);background:var(--accent-soft);
+    transform:translateY(-1px);
+  }
+  .btn svg{width:17px;height:17px;flex:none;}
+  .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .btn-primary:hover{color:#fff;background:var(--accent);filter:brightness(1.07);border-color:var(--accent);}
+
+  /* ---------- Prose ---------- */
+  .prose{color:var(--text);font-size:1rem;}
+  .prose p{margin:0 0 16px;}
+
+  /* ---------- Two-column info (edu / exp) ---------- */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .info-list{list-style:none;margin:0;padding:0;}
+  .info-list li{position:relative;padding:0 0 20px 22px;}
+  .info-list li:last-child{padding-bottom:0;}
+  .info-list li::before{
+    content:"";position:absolute;left:2px;top:8px;
+    width:9px;height:9px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--accent);
+  }
+  .info-list li::after{
+    content:"";position:absolute;left:6px;top:20px;bottom:2px;
+    width:1px;background:var(--border);
+  }
+  .info-list li:last-child::after{display:none;}
+  .info-title{font-weight:600;color:var(--heading);display:block;line-height:1.4;}
+  .info-org{color:var(--text-muted);font-size:.93rem;}
+  .info-date{color:var(--text-muted);font-size:.83rem;font-variant-numeric:tabular-nums;margin-top:2px;}
+
+  /* ---------- Publications ---------- */
+  .pub-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:26px;}
+  .pub-item{
+    display:flex;gap:22px;align-items:flex-start;
+    padding:18px;margin:-18px;border-radius:var(--radius);
+    transition:background .18s ease, box-shadow .18s ease;
+  }
+  .pub-item:hover{background:var(--bg-subtle);}
+  .pub-figure{
+    flex:0 0 300px;width:300px;aspect-ratio:16/9;
+    background:var(--bg-subtle);
+    border:1px solid var(--border);
+    border-radius:10px;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .pub-figure img{width:100%;height:100%;object-fit:contain;}
+  .pub-figure.no-img img{display:none;}
+  .pub-figure.no-img::after{content:attr(data-label);color:var(--text-muted);font-size:12.5px;font-weight:500;letter-spacing:.03em;text-align:center;padding:0 10px;}
+  .pub-body{flex:1;min-width:0;}
+  .pub-title{
+    font-size:1.06rem;font-weight:600;color:var(--heading);
+    line-height:1.4;margin:0 0 6px;letter-spacing:-.005em;
+  }
+  .pub-title a{color:var(--heading);}
+  .pub-title a:hover{color:var(--accent);text-decoration:none;}
+  .pub-authors{color:var(--text-muted);font-size:.93rem;line-height:1.55;margin:0 0 9px;}
+  .pub-authors .me{color:var(--text);font-weight:700;}
+  .pub-authors a{color:var(--text-muted);}
+  .pub-authors a:hover{color:var(--accent);}
+  .pub-venue{
+    display:inline-flex;align-items:center;
+    font-size:12.5px;font-weight:600;letter-spacing:.01em;
+    color:var(--accent);background:var(--accent-soft);
+    padding:3px 10px;border-radius:7px;margin-bottom:11px;
+  }
+  .pub-venue.preprint{color:var(--text-muted);background:var(--bg-subtle);border:1px solid var(--border);}
+  .pub-links{display:flex;flex-wrap:wrap;gap:8px;}
+  .plink{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:13px;font-weight:500;
+    color:var(--text-muted);
+    border:1px solid var(--border);
+    background:var(--surface);
+    padding:4px 10px;border-radius:8px;
+    transition:all .15s ease;
+  }
+  .plink:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);text-decoration:none;}
+  .plink svg{width:14px;height:14px;flex:none;}
+
+  /* ---------- Patents ---------- */
+  .patent-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+  .patent-item{
+    padding:16px 18px;border:1px solid var(--border);border-radius:12px;
+    background:var(--surface);box-shadow:var(--shadow-sm);
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .patent-item:hover{border-color:var(--border-strong);transform:translateY(-1px);}
+  .patent-title{font-weight:600;color:var(--heading);margin:0 0 4px;line-height:1.45;}
+  .patent-authors{color:var(--text-muted);font-size:.9rem;line-height:1.5;margin:0 0 4px;}
+  .patent-authors .me{color:var(--text);font-weight:700;}
+  .patent-authors a{color:var(--text-muted);}
+  .patent-id{color:var(--text-muted);font-size:.83rem;font-variant-numeric:tabular-nums;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:64px;padding:28px 0 44px;
+    border-top:1px solid var(--border);
+    color:var(--text-muted);font-size:.85rem;text-align:center;
+  }
+
+  .block{padding:34px 0;}
+
+  /* ---------- Reveal animation ---------- */
+  .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;}
+  .js .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion: reduce){
+    .js .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:760px){
+    .cols{grid-template-columns:1fr;gap:28px;}
+  }
+  @media (max-width:640px){
+    .intro{flex-direction:column;align-items:center;text-align:center;gap:22px;padding:36px 0 30px;}
+    .intro-photo{flex-basis:auto;width:168px;}
+    .intro-name{font-size:2.1rem;margin-bottom:14px;}
+    .intro-name .zh{display:block;margin:8px 0 0;font-size:1.35rem;}
+    .intro-body .prose{text-align:left;}
+    .nav-links{display:none;}
+    .pub-item{flex-direction:column;gap:14px;}
+    .pub-figure{flex-basis:auto;width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5"/><path d="M22 10v6"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <h1 class="nav-brand-wrap"><a class="nav-brand" href="#top">Wenqi Ouyang <span class="nav-zh">欧阳雯琪</span></a></h1>
+    <div class="nav-links">
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#patents">Patents</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <!-- Intro -->
+  <header class="intro reveal" id="about">
+    <div class="intro-photo">
+      <img src="data/my_photo.jpg" alt="Wenqi Ouyang">
+    </div>
+    <div class="intro-body">
+      <div class="prose">
+        <p>I am a Ph.D. student at <a href="https://www.mmlab-ntu.com/index.html" target="_blank" rel="noopener">MMLab@NTU</a>, advised by Prof. <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a>. I previously served as a senior research engineer at DAMO Academy, Alibaba Group, where I focused on video enhancement and editing, working with <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a> and Prof. <a href="https://www4.comp.polyu.edu.hk/~cslzhang/" target="_blank" rel="noopener">Lei Zhang</a>. Prior to joining Alibaba, I earned my M.Sc. in computer science and technology from Tsinghua University. I also hold a B.Sc. in fundamental physics and mathematics from Tsinghua University.</p>
+        <p>My research interests span deep learning, computer vision, and image and video generation and editing. I am also interested in exploring the applications of natural language processing in multimedia analysis.</p>
+      </div>
+      <p class="links">
+        <a href="mailto:vinkeyoy@gmail.com">Email</a>
+        <span class="sep">/</span>
+        <a href="https://scholar.google.com/citations?user=pYeM5JUAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar</a>
+        <span class="sep">/</span>
+        <a href="https://github.com/Vicky0522" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- Education & Experience -->
+  <section id="education" class="block reveal">
+    <div class="cols">
+      <div>
+        <h2 class="section-title">Education</h2>
+        <ul class="info-list">
+          <li>
+            <span class="info-title">Ph.D. Student, Computer Science</span>
+            <span class="info-org">MMLab@NTU, Singapore</span>
+            <div class="info-date">Jan 2025 – Present</div>
+          </li>
+          <li>
+            <span class="info-title">M.Sc. in Computer Science &amp; Technology</span>
+            <span class="info-org">Tsinghua University, Beijing</span>
+            <div class="info-date">Sep 2016 – Jul 2019</div>
+          </li>
+          <li>
+            <span class="info-title">B.Sc. in Fundamental Physics &amp; Mathematics</span>
+            <span class="info-org">Tsinghua University, Beijing</span>
+            <div class="info-date">Sep 2012 – Jul 2016</div>
+          </li>
+          <li>
+            <span class="info-title">Minor in Business Administration</span>
+            <span class="info-org">Economics &amp; Management, Tsinghua University</span>
+            <div class="info-date">Sep 2013 – Jul 2016</div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="section-title">Experience</h2>
+        <ul class="info-list">
+          <li>
+            <span class="info-title">Research Associate</span>
+            <span class="info-org">MMLab@NTU, Singapore</span>
+            <div class="info-date">Nov 2023 – Present</div>
+          </li>
+          <li>
+            <span class="info-title">Research Engineer</span>
+            <span class="info-org">DAMO Academy, Alibaba Group, Beijing</span>
+            <div class="info-date">Jul 2019 – Nov 2023</div>
+          </li>
+          <li>
+            <span class="info-title">Research Intern</span>
+            <span class="info-org">ByteDance AI Lab, Beijing</span>
+            <div class="info-date">Jul 2017 – Sep 2017</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="block reveal">
+    <h2 class="section-title">Publications</h2>
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <div class="pub-figure" data-label="VidiHand"><img src="data/paper_figure/vidihand.jpg" alt="Video Diffusion for Hand Motion Reconstruction" onerror="this.closest('.pub-figure').classList.add('no-img')"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://vidihand.github.io" target="_blank" rel="noopener">The Surprising Effectiveness of Video Diffusion Models for Hand Motion Reconstruction</a></h3>
+          <p class="pub-authors"><a href="https://github.com/NTUYWANG103" target="_blank" rel="noopener">Yuxi Wang</a>, Chengkai Jin, Yufei Liu, <span class="me">Wenqi Ouyang</span>, Tianyi Wei, Zhiwei Zeng, Siyuan Huang, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="noopener">Zhiqi Shen</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue preprint">arXiv 2026</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2606.30308" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://vidihand.github.io" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure" data-label="ClothTransformer"><img src="data/paper_figure/clothtransformer.jpg" alt="ClothTransformer" onerror="this.closest('.pub-figure').classList.add('no-img')"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://yucrazing.github.io/clothtransformer/" target="_blank" rel="noopener">ClothTransformer: Unified Latent-Space Transformers for Scalable Cloth Simulation</a></h3>
+          <p class="pub-authors">Yu Zhang, Yidi Shao, <span class="me">Wenqi Ouyang</span>, <a href="https://nirvanalan.github.io/" target="_blank" rel="noopener">Yushi Lan</a>, Zhexin Liang, Chengrui Wu, Xudong Xu, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue preprint">arXiv 2026</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2605.27852" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://yucrazing.github.io/clothtransformer/" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure" data-label="Hand2World"><img src="data/paper_figure/hand2world.jpg" alt="Hand2World" onerror="this.closest('.pub-figure').classList.add('no-img')"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://arxiv.org/abs/2602.09600" target="_blank" rel="noopener">Hand2World: Autoregressive Egocentric Interaction Generation via Free-Space Hand Gestures</a></h3>
+          <p class="pub-authors"><a href="https://github.com/NTUYWANG103" target="_blank" rel="noopener">Yuxi Wang</a>, <span class="me">Wenqi Ouyang</span>, Tianyi Wei, Yi Dong, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="noopener">Zhiqi Shen</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue preprint">arXiv 2026</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2602.09600" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/gencolor.png" alt="GenColor"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://yidong.pro/projects/gencolor/" target="_blank" rel="noopener">GenColor: Generative and Expressive Color Enhancement with Pixel-Perfect Texture Preservation</a></h3>
+          <p class="pub-authors">Yi Dong, <a href="https://github.com/NTUYWANG103" target="_blank" rel="noopener">Yuxi Wang</a>, <a href="https://scholar.google.com/citations?user=wLTXeNwAAAAJ&hl=fr" target="_blank" rel="noopener">Xianhui Lin</a>, <span class="me">Wenqi Ouyang</span>, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="noopener">Zhiqi Shen</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, Ruoxi Fan, Rynson W.H. Lau</p>
+          <span class="pub-venue">NeurIPS 2025 (Spotlight)</span>
+          <div class="pub-links">
+            <a class="plink" href="https://openreview.net/forum?id=n8AvXKcCeR" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>Paper</a>
+            <a class="plink" href="https://yidong.pro/projects/gencolor/" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/NTUYWANG103/GenColor" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/tokensgen.jpg" alt="TokensGen"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://vicky0522.github.io/tokensgen-webpage/" target="_blank" rel="noopener">TokensGen: Harnessing Condensed Tokens for Long Video Generation</a></h3>
+          <p class="pub-authors"><span class="me">Wenqi Ouyang</span>, <a href="https://xizaoqu.github.io/" target="_blank" rel="noopener">Zeqi Xiao</a>, <a href="https://scholar.google.com/citations?user=qDsgBJAAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Danni Yang</a>, <a href="https://zhouyifan.net/about/" target="_blank" rel="noopener">Yifan Zhou</a>, <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener">Shuai Yang</a>, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&hl=en" target="_blank" rel="noopener">Lei Yang</a>, <a href="https://jianlou.github.io/" target="_blank" rel="noopener">Jianlou Si</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue">ICCV 2025</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2507.15728" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://vicky0522.github.io/tokensgen-webpage/" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/Vicky0522/TokensGen" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/worldmem.jpg" alt="WorldMem"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://xizaoqu.github.io/worldmem/" target="_blank" rel="noopener">WorldMem: Long-term Consistent World Simulation with Memory</a></h3>
+          <p class="pub-authors"><a href="https://xizaoqu.github.io/" target="_blank" rel="noopener">Zeqi Xiao</a>, <a href="https://nirvanalan.github.io/" target="_blank" rel="noopener">Yushi Lan</a>, <a href="https://zhouyifan.net/about/" target="_blank" rel="noopener">Yifan Zhou</a>, <span class="me">Wenqi Ouyang</span>, <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener">Shuai Yang</a>, <a href="https://zengyh1900.github.io/" target="_blank" rel="noopener">Yanhong Zeng</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue">NeurIPS 2025</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2504.12369" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://xizaoqu.github.io/worldmem/" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/xizaoqu/WorldMem" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/trajattn.jpg" alt="Trajectory Attention"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://xizaoqu.github.io/trajattn/" target="_blank" rel="noopener">Trajectory Attention for Fine-grained Video Motion Control</a></h3>
+          <p class="pub-authors"><a href="https://xizaoqu.github.io/" target="_blank" rel="noopener">Zeqi Xiao</a>, <span class="me">Wenqi Ouyang</span>, <a href="https://zhouyifan.net/about/" target="_blank" rel="noopener">Yifan Zhou</a>, <a href="https://williamyang1991.github.io/" target="_blank" rel="noopener">Shuai Yang</a>, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&hl=en" target="_blank" rel="noopener">Lei Yang</a>, <a href="https://jianlou.github.io/" target="_blank" rel="noopener">Jianlou Si</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue">ICLR 2025</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2411.19324" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://xizaoqu.github.io/trajattn/" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/xizaoqu/TrajectoryAttention" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/i2vedit.png" alt="I2VEdit"></div>
+        <div class="pub-body">
+          <h3 class="pub-title"><a href="https://i2vedit.github.io/" target="_blank" rel="noopener">I2VEdit: First-Frame-Guided Video Editing via Image-to-Video Diffusion Models</a></h3>
+          <p class="pub-authors"><span class="me">Wenqi Ouyang</span>, Yi Dong, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&hl=en" target="_blank" rel="noopener">Lei Yang</a>, <a href="https://jianlou.github.io/" target="_blank" rel="noopener">Jianlou Si</a>, <a href="https://xingangpan.github.io/" target="_blank" rel="noopener">Xingang Pan</a></p>
+          <span class="pub-venue">SIGGRAPH Asia 2024</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2405.16537" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://i2vedit.github.io/" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/Vicky0522/I2VEdit" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/movingcolor.jpg" alt="MovingColor"></div>
+        <div class="pub-body">
+          <h3 class="pub-title">MovingColor: Seamless Fusion of Fine-grained Video Color Enhancement</h3>
+          <p class="pub-authors">Yi Dong, <a href="https://github.com/NTUYWANG103" target="_blank" rel="noopener">Yuxi Wang</a>, Zheng Fang, <span class="me">Wenqi Ouyang</span>, <a href="https://scholar.google.com/citations?user=wLTXeNwAAAAJ&hl=fr" target="_blank" rel="noopener">Xianhui Lin</a>, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="noopener">Zhiqi Shen</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a>, <a href="https://scholar.google.com/citations?user=J1vMnRgAAAAJ&hl=en" target="_blank" rel="noopener">Qingming Huang</a></p>
+          <span class="pub-venue">ACM MM 2024</span>
+          <div class="pub-links">
+            <a class="plink" href="https://dl.acm.org/doi/abs/10.1145/3664647.3681130" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>Paper</a>
+            <a class="plink" href="https://yidong.pro/projects/movingcolor" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/NTUYWANG103/MovingColor" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/cfnet.jpg" alt="ChromaFusionNet"></div>
+        <div class="pub-body">
+          <h3 class="pub-title">ChromaFusionNet (CFNet): Natural Fusion of Fine-grained Color Editing</h3>
+          <p class="pub-authors">Yi Dong, <a href="https://github.com/NTUYWANG103" target="_blank" rel="noopener">Yuxi Wang</a>, Ruoxi Fan, <span class="me">Wenqi Ouyang</span>, <a href="https://scholar.google.com/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="noopener">Zhiqi Shen</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a></p>
+          <span class="pub-venue">AAAI 2024</span>
+          <div class="pub-links">
+            <a class="plink" href="https://ojs.aaai.org/index.php/AAAI/article/view/27925" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>Paper</a>
+            <a class="plink" href="https://yidong.pro/projects/cfnet" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Homepage</a>
+            <a class="plink" href="https://github.com/NTUYWANG103/CFNet" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/rsfnet.png" alt="RSFNet"></div>
+        <div class="pub-body">
+          <h3 class="pub-title">RSFNet: A White-Box Image Retouching Approach using Region-Specific Color Filters</h3>
+          <p class="pub-authors"><span class="me">Wenqi Ouyang</span>, Yi Dong, <a href="https://piddnad.github.io/xiaoyangkang" target="_blank" rel="noopener">Xiaoyang Kang</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, Xin Xu, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a></p>
+          <span class="pub-venue">ICCV 2023</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2303.08682" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://github.com/Vicky0522/RSFNet" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-figure"><img src="data/paper_figure/ddcolor.png" alt="DDColor"></div>
+        <div class="pub-body">
+          <h3 class="pub-title">DDColor: Towards Photo-Realistic and Semantic-Aware Image Colorization via Dual Decoders</h3>
+          <p class="pub-authors"><a href="https://piddnad.github.io/xiaoyangkang" target="_blank" rel="noopener">Xiaoyang Kang</a>, <a href="https://cg.cs.tsinghua.edu.cn/people/~tyang/" target="_blank" rel="noopener">Tao Yang</a>, <span class="me">Wenqi Ouyang</span>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, <a href="https://lingzhili.com/" target="_blank" rel="noopener">Lingzhi Li</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a></p>
+          <span class="pub-venue">ICCV 2023</span>
+          <div class="pub-links">
+            <a class="plink" href="https://arxiv.org/abs/2212.11613" target="_blank" rel="noopener"><svg><use href="#i-file"/></svg>arXiv</a>
+            <a class="plink" href="https://github.com/piddnad/DDColor" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- Patents -->
+  <section id="patents" class="block reveal">
+    <h2 class="section-title">Patents</h2>
+    <ul class="patent-list">
+      <li class="patent-item">
+        <p class="patent-title">Methods, systems, and electronic devices for image processing</p>
+        <p class="patent-authors">Yi Dong, Yuxi Wang, Ruoxi Fan, <span class="me">Wenqi Ouyang</span>, <a href="https://scholar.google.com.sg/citations?user=EA2T_lwAAAAJ&hl=en" target="_blank" rel="noopener">Zhiqi Shen</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a></p>
+        <span class="patent-id">CN Patent 117,788,352 A, 2023</span>
+      </li>
+      <li class="patent-item">
+        <p class="patent-title">Methods, systems, devices, and storage media for color grading of images and videos</p>
+        <p class="patent-authors"><span class="me">Wenqi Ouyang</span>, <a href="https://cg.cs.tsinghua.edu.cn/people/~tyang/" target="_blank" rel="noopener">Tao Yang</a></p>
+        <span class="patent-id">CN Patent 114,549,674 A, 2022</span>
+      </li>
+      <li class="patent-item">
+        <p class="patent-title">Methods and apparatus for video processing</p>
+        <p class="patent-authors"><a href="https://scholar.google.com/citations?user=wLTXeNwAAAAJ&hl=fr" target="_blank" rel="noopener">Xianhui Lin</a>, <a href="https://scholar.google.com/citations?user=CF2CM2UAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Zhanning Gao</a>, <span class="me">Wenqi Ouyang</span>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a></p>
+        <span class="patent-id">CN Patent 114,302,175 A, 2022</span>
+      </li>
+      <li class="patent-item">
+        <p class="patent-title">Methods and apparatus for video processing</p>
+        <p class="patent-authors"><a href="https://scholar.google.com/citations?user=wLTXeNwAAAAJ&hl=fr" target="_blank" rel="noopener">Xianhui Lin</a>, <a href="https://scholar.google.com/citations?user=CF2CM2UAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Zhanning Gao</a>, <span class="me">Wenqi Ouyang</span>, <a href="https://cg.cs.tsinghua.edu.cn/people/~tyang/" target="_blank" rel="noopener">Tao Yang</a>, <a href="https://scholar.google.com/citations?user=x5dEuxsAAAAJ&hl=en" target="_blank" rel="noopener">Peiran Ren</a>, Feiying Ma, <a href="https://scholar.google.com/citations?user=M0Ei1zkAAAAJ&hl=en" target="_blank" rel="noopener">Xuansong Xie</a>, <a href="https://www4.comp.polyu.edu.hk/~cslzhang/" target="_blank" rel="noopener">Lei Zhang</a></p>
+        <span class="patent-id">CN Patent 114,286,126 A, 2022</span>
+      </li>
+      <li class="patent-item">
+        <p class="patent-title">Methods and apparatus for training image processing model</p>
+        <p class="patent-authors"><a href="https://quanlzheng.github.io/" target="_blank" rel="noopener">Quanlong Zheng</a>, <a href="https://huizeng.github.io/" target="_blank" rel="noopener">Hui Zeng</a>, <span class="me">Wenqi Ouyang</span></p>
+        <span class="patent-id">CN Patent 114,092,756 A, 2022</span>
+      </li>
+      <li class="patent-item">
+        <p class="patent-title">A method for video color grading, media data processing, device, and storage medium</p>
+        <p class="patent-authors"><span class="me">Wenqi Ouyang</span></p>
+        <span class="patent-id">CN Patent 113,497,954 A, 2021</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 Wenqi Ouyang · 欧阳雯琪 &nbsp;·&nbsp; <a href="mailto:vinkeyoy@gmail.com">vinkeyoy@gmail.com</a></p>
+  </footer>
+
+</div>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = [].slice.call(document.querySelectorAll('.reveal'));
+    var reveal = function(e){ e.classList.add('in'); };
+    if(!('IntersectionObserver' in window)){ els.forEach(reveal); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ reveal(en.target); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.04});
+    els.forEach(function(e){
+      // reveal anything already in or above the viewport right away
+      if(e.getBoundingClientRect().top < window.innerHeight * 0.92){ reveal(e); }
+      else { io.observe(e); }
+    });
+    // failsafe: never leave content hidden
+    setTimeout(function(){ els.forEach(reveal); }, 1600);
+  })();
+</script>
+
+</body>
+</html>
